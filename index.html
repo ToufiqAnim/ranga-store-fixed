@@ -20,12 +20,12 @@
 
 <body>
   <header>
-    <h1 class="text-success text-center pt-3">SungSam Store</h1>
+    <h1 class="text-center pt-3">A To Z Bazar</h1>
     <div class="search-field container pt-2 pb-5">
       
         <!-- Search Box -->
           <div class="d-flex">
-            <input type="text" class="form-control me-2" placeholder="Your Favourite Book" id="search-input"/>
+            <input type="text" class="form-control me-2" placeholder="Search Your Desire Product" id="search-input"/>
             <button onclick="searchBooks()" class="btn btn-dark" id="search-btn">Search</button>
           </div>
     </div>
@@ -33,12 +33,13 @@
   <main class="main">
 
     <div class="row">
-      
+      <!-- products section -->
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="ms-5">
           
         </div>
       </div>
+      <!-- cart section -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart ms-5" id="my-cart">
           <table class="table">
@@ -84,7 +85,7 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-danger text-center">Buy Now</button>
           </div>
         </div>
       </div>

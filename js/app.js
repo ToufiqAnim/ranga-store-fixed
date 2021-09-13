@@ -26,12 +26,13 @@ const showProducts = (products) => {
       <h3>Price:$  ${product.price}</h3>
       <p><i class="fas fa-user"></i> ${product.rating.count}
       <i class="fas fa-star"></i>  ${product.rating.rate}</p>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now ">add to cart</button>
+      <button id="details-btn">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
 };
+// product count //
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -58,7 +59,7 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = value.toFixed(2);
 };
 
 // update delivery charge and total Tax
@@ -83,5 +84,4 @@ const updateTotal = () => {
   let totalCost  = document.getElementById("total");
   const grandTotal = parseFloat( getInputValue("price") ) + parseFloat(getInputValue("delivery-charge")) + parseFloat(getInputValue("total-tax"));
     totalCost.innerText = grandTotal.toFixed(2);
-  // document.getElementById("total").innerText = grandTotal;
 };
