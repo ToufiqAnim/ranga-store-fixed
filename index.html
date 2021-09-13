@@ -6,37 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SungSam Store</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- icon -->
+  <script src="https://kit.fontawesome.com/395574400a.js" crossorigin="anonymous"></script>
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
+  <header>
+    <h1 class="text-success text-center pt-3">SungSam Store</h1>
+    <div class="search-field container pt-2 pb-5">
+      
+        <!-- Search Box -->
+          <div class="d-flex">
+            <input type="text" class="form-control me-2" placeholder="Your Favourite Book" id="search-input"/>
+            <button onclick="searchBooks()" class="btn btn-dark" id="search-btn">Search</button>
+          </div>
     </div>
+  </header>
+  <main class="main">
+
     <div class="row">
+      
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <h1></h1>
+        <div id="all-products" class="ms-5">
+          
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
+        <div class="cart ms-5" id="my-cart">
           <table class="table">
             <thead>
               <h1>My-Cart</h1>
@@ -50,7 +54,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>

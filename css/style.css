@@ -38,11 +38,12 @@ body {
 .single-product {
   padding: 10px;
   transition: 0.6s;
+  height: 450px;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid cyan;
+ 
 }
 .product-image {
   width: 150px;
