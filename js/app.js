@@ -19,9 +19,9 @@ const showProducts = (products) => {
     div.classList.add("product");
     div.innerHTML = `<div class="single-product border me-4 mb-4">
       <div>
-    <img class="product-image pt-3" src=${image}></img>
+    <img class="product-image pt-1" src=${image}></img>
       </div>
-      <h4>${product.title}</h4>
+      <h5 class = 'py-2 title-color'>${product.title}</h5>
       <p>Category: ${product.category}</p>
       <h4>Price:$  ${product.price}</h4>
       <p class = 'h5'><i class="fas fa-user pe-3"> ${product.rating.count}</i>
